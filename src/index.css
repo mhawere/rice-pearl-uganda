@@ -8,49 +8,38 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Modern neutral background */
-    --background: 0 0% 98%;
-    --foreground: 240 10% 10%;
-
-    /* Card colors */
+    --background: 210 17% 98%;
+    --foreground: 222 47% 11%;
     --card: 0 0% 100%;
-    --card-foreground: 240 10% 10%;
-
+    --card-foreground: 222 47% 11%;
     --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 10%;
-
-    /* Modern emerald green - Primary */
-    --primary: 142 76% 36%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 158 64% 16%;
     --primary-foreground: 0 0% 100%;
-
-    /* Light neutral - Secondary */
-    --secondary: 240 5% 96%;
-    --secondary-foreground: 240 10% 10%;
-
-    /* Muted tones */
-    --muted: 240 5% 96%;
-    --muted-foreground: 240 4% 46%;
-
-    /* Vibrant amber - Accent */
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
     --accent: 38 92% 50%;
-    --accent-foreground: 0 0% 100%;
-
-    /* Deep forest green */
-    --green: 156 72% 29%;
-    --green-foreground: 0 0% 100%;
-
-    --destructive: 0 84.2% 60.2%;
+    --accent-foreground: 222 47% 11%;
+    --destructive: 4 90% 58%;
     --destructive-foreground: 0 0% 100%;
-
-    --border: 240 6% 90%;
-    --input: 240 6% 90%;
-    --ring: 142 76% 36%;
-
-    --radius: 0.75rem;
-
-    /* Custom design tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(142 76% 36%) 0%, hsl(156 72% 29%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(38 92% 50%) 0%, hsl(45 93% 47%) 100%);
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 158 64% 16%;
+    --radius: 1rem;
+    --green: 158 64% 16%;
+    --green-foreground: 0 0% 100%;
+    --cream: 39 33% 95%;
+    --brown: 25 47% 35%;
+    --gold: 38 92% 50%;
+    --amber: 43 96% 56%;
+    --terracotta: 12 76% 61%;
+    --deep-green: 158 64% 16%;
+    --charcoal: 222 47% 11%;
+    
+    --gradient-primary: linear-gradient(135deg, hsl(158 64% 16%) 0%, hsl(156 72% 29%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(38 92% 50%) 0%, hsl(43 96% 56%) 100%);
     --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
     --shadow-medium: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
     --shadow-large: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
@@ -65,13 +54,27 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground antialiased;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    letter-spacing: -0.011em;
+    font-size: 18px;
+    line-height: 1.7;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Space Grotesk', 'Inter', sans-serif;
     font-weight: 700;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+  }
+
+  h1 {
+    font-size: clamp(3rem, 8vw, 7rem);
+  }
+
+  h2 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+  }
+
+  h3 {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
   }
 
   /* Smooth scroll behavior */

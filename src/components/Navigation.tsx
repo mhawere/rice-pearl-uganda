@@ -41,7 +41,7 @@ const Navigation = () => {
             <img 
               src={logo} 
               alt="Pearl Rice" 
-              className={`transition-all duration-500 group-hover:scale-105 ${navIsOpaque ? 'h-12' : 'h-16'}`}
+              className={`transition-all duration-500 group-hover:scale-105 ${navIsOpaque ? 'h-14' : 'h-20'}`}
             />
           </Link>
 

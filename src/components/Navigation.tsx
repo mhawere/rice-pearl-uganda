@@ -29,25 +29,25 @@ const Navigation = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-card shadow-md' : 'bg-card/80 backdrop-blur-sm'
+        isScrolled ? 'bg-card/95 backdrop-blur-md shadow-soft border-b border-border' : 'bg-transparent'
       }`}
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <Link to="/" className="flex items-center gap-3">
-            <img src={logo} alt="Pearl Rice Uganda" className="h-12 w-auto" />
+          <Link to="/" className="flex items-center gap-3 transition-transform hover:scale-105">
+            <img src={logo} alt="Pearl Rice Uganda" className="h-14 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-1">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-sm font-medium transition-colors hover:text-accent ${
+                className={`px-4 py-2 text-sm font-medium rounded-lg transition-all ${
                   location.pathname === link.path
-                    ? 'text-accent'
-                    : 'text-foreground'
+                    ? 'bg-primary text-primary-foreground'
+                    : 'text-foreground hover:bg-secondary'
                 }`}
               >
                 {link.name}

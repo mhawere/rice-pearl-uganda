@@ -67,33 +67,39 @@ const Contact = () => {
   return (
     <div className="min-h-screen pt-20">
       {/* Page Header */}
-      <section className="py-20 bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl font-serif font-bold mb-4 animate-fade-in">
+      <section className="py-32 bg-gradient-to-br from-primary via-primary to-green text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDE4YzAtMy4zMTQgMi42ODYtNiA2LTZzNi0yLjY4NiA2LTZjMC0zLjMxNC0yLjY4Ni02LTYtNnMtNiAyLjY4Ni02IDYtMi42ODYgNi02IDYtNi0yLjY4Ni02LTYtMi42ODYtNi02LTYgNiAyLjY4NiA2IDYgMi42ODYgNiA2IDZjMy4zMTQgMCA2LTIuNjg2IDYtNnoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-30"></div>
+        <div className="container mx-auto px-4 lg:px-8 text-center relative z-10">
+          <div className="inline-block px-3 py-1 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full text-sm font-semibold mb-6">
+            Contact
+          </div>
+          <h1 className="text-6xl md:text-7xl font-display font-bold mb-6 animate-fade-in tracking-tight">
             Get in Touch
           </h1>
-          <p className="text-xl animate-fade-in" style={{ animationDelay: '0.1s' }}>
+          <p className="text-2xl animate-fade-in opacity-90" style={{ animationDelay: '0.1s' }}>
             We'd Love to Hear from You
           </p>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+      <section className="py-32 bg-background -mt-16">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-12 max-w-7xl mx-auto">
             {/* Contact Information */}
             <div className="space-y-8 animate-fade-in">
               <div>
-                <h2 className="text-3xl font-serif font-bold mb-6">Contact Information</h2>
+                <h2 className="text-4xl font-display font-bold mb-8 tracking-tight">Contact Information</h2>
                 
                 <div className="space-y-6">
-                  <Card>
-                    <CardContent className="p-6">
-                      <div className="flex items-start gap-3">
-                        <MapPin className="text-accent mt-1" size={24} />
+                  <Card className="border-0 shadow-soft hover:shadow-medium transition-shadow">
+                    <CardContent className="p-8">
+                      <div className="flex items-start gap-4">
+                        <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
+                          <MapPin size={24} />
+                        </div>
                         <div>
-                          <h3 className="font-bold mb-2">Our Farms</h3>
+                          <h3 className="font-bold text-lg mb-2">Our Farms</h3>
                           <p className="text-sm text-muted-foreground">
                             Kalalu, Namassank, Butyobule, Nsozibini, Buboni, Bupata
                           </p>
@@ -102,24 +108,28 @@ const Contact = () => {
                     </CardContent>
                   </Card>
 
-                  <Card>
-                    <CardContent className="p-6">
-                      <div className="flex items-start gap-3">
-                        <MapPin className="text-accent mt-1" size={24} />
+                  <Card className="border-0 shadow-soft hover:shadow-medium transition-shadow">
+                    <CardContent className="p-8">
+                      <div className="flex items-start gap-4">
+                        <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
+                          <MapPin size={24} />
+                        </div>
                         <div>
-                          <h3 className="font-bold mb-2">Factory</h3>
+                          <h3 className="font-bold text-lg mb-2">Factory</h3>
                           <p className="text-sm text-muted-foreground">Busembatia, Uganda</p>
                         </div>
                       </div>
                     </CardContent>
                   </Card>
 
-                  <Card>
-                    <CardContent className="p-6">
-                      <div className="flex items-start gap-3">
-                        <MapPin className="text-accent mt-1" size={24} />
+                  <Card className="border-0 shadow-soft hover:shadow-medium transition-shadow">
+                    <CardContent className="p-8">
+                      <div className="flex items-start gap-4">
+                        <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
+                          <MapPin size={24} />
+                        </div>
                         <div>
-                          <h3 className="font-bold mb-2">Retail Shops</h3>
+                          <h3 className="font-bold text-lg mb-2">Retail Shops</h3>
                           <p className="text-sm text-muted-foreground">
                             Bakuli, Uganda<br />
                             Kansanga, Uganda
@@ -129,20 +139,26 @@ const Contact = () => {
                     </CardContent>
                   </Card>
 
-                  <Card>
-                    <CardContent className="p-6">
-                      <div className="space-y-3">
+                  <Card className="border-0 shadow-soft hover:shadow-medium transition-shadow">
+                    <CardContent className="p-8">
+                      <div className="space-y-4">
                         <div className="flex items-center gap-3">
-                          <Phone className="text-accent" size={20} />
-                          <span>+256 751 950 820</span>
+                          <div className="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
+                            <Phone size={18} />
+                          </div>
+                          <span className="font-medium">+256 751 950 820</span>
                         </div>
                         <div className="flex items-center gap-3">
-                          <Phone className="text-accent" size={20} />
-                          <span>+256 753 202 443</span>
+                          <div className="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
+                            <Phone size={18} />
+                          </div>
+                          <span className="font-medium">+256 753 202 443</span>
                         </div>
                         <div className="flex items-center gap-3">
-                          <Mail className="text-accent" size={20} />
-                          <a href="mailto:info@pearlrice.co.ug" className="hover:text-accent transition-colors">
+                          <div className="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
+                            <Mail size={18} />
+                          </div>
+                          <a href="mailto:info@pearlrice.co.ug" className="hover:text-primary transition-colors font-medium">
                             info@pearlrice.co.ug
                           </a>
                         </div>
@@ -155,12 +171,12 @@ const Contact = () => {
 
             {/* Contact Form */}
             <div className="animate-fade-in" style={{ animationDelay: '0.1s' }}>
-              <Card>
-                <CardContent className="p-6">
-                  <h2 className="text-2xl font-serif font-bold mb-6">Send us a Message</h2>
+              <Card className="border-0 shadow-large">
+                <CardContent className="p-10">
+                  <h2 className="text-3xl font-display font-bold mb-8 tracking-tight">Send us a Message</h2>
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium mb-2">
+                      <label htmlFor="name" className="block text-sm font-semibold mb-2">
                         Full Name *
                       </label>
                       <Input
@@ -171,11 +187,12 @@ const Contact = () => {
                         onChange={handleChange}
                         required
                         maxLength={100}
+                        className="h-12"
                       />
                     </div>
 
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium mb-2">
+                      <label htmlFor="email" className="block text-sm font-semibold mb-2">
                         Email Address *
                       </label>
                       <Input
@@ -186,11 +203,12 @@ const Contact = () => {
                         onChange={handleChange}
                         required
                         maxLength={255}
+                        className="h-12"
                       />
                     </div>
 
                     <div>
-                      <label htmlFor="phone" className="block text-sm font-medium mb-2">
+                      <label htmlFor="phone" className="block text-sm font-semibold mb-2">
                         Phone Number *
                       </label>
                       <Input
@@ -201,11 +219,12 @@ const Contact = () => {
                         onChange={handleChange}
                         required
                         maxLength={20}
+                        className="h-12"
                       />
                     </div>
 
                     <div>
-                      <label htmlFor="message" className="block text-sm font-medium mb-2">
+                      <label htmlFor="message" className="block text-sm font-semibold mb-2">
                         Message *
                       </label>
                       <Textarea
@@ -217,10 +236,11 @@ const Contact = () => {
                         maxLength={1000}
                         rows={6}
                         placeholder="Tell us how we can help you..."
+                        className="resize-none"
                       />
                     </div>
 
-                    <Button type="submit" className="w-full" disabled={isSubmitting}>
+                    <Button type="submit" className="w-full h-14" disabled={isSubmitting}>
                       {isSubmitting ? 'Sending...' : 'Send Message'}
                     </Button>
                   </form>

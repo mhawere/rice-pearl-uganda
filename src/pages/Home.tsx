@@ -60,14 +60,17 @@ const Home = () => {
       <Hero />
 
       {/* Company Introduction */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+      <section className="py-32 bg-background">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
             <div className="animate-fade-in">
-              <h2 className="text-4xl font-serif font-bold mb-6">
+              <div className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-6">
+                Our Story
+              </div>
+              <h2 className="text-5xl md:text-6xl font-display font-bold mb-8 tracking-tight">
                 Welcome to Pearl Rice
               </h2>
-              <p className="text-lg leading-relaxed text-muted-foreground mb-4">
+              <p className="text-lg leading-relaxed text-muted-foreground mb-6">
                 Pearl Rice Limited was incorporated in Uganda in 2009. The company is dedicated to enhancing food security through the production, processing, and distribution of rice in Uganda and East Africa.
               </p>
               <p className="text-lg leading-relaxed text-muted-foreground">
@@ -78,7 +81,7 @@ const Home = () => {
               <img
                 src={productsImage}
                 alt="Pearl Rice Products"
-                className="rounded-lg shadow-lg w-full"
+                className="rounded-2xl shadow-large w-full"
               />
             </div>
           </div>
@@ -86,16 +89,19 @@ const Home = () => {
       </section>
 
       {/* Featured Products */}
-      <section className="py-20 bg-card">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12 animate-fade-in">
-            <h2 className="text-4xl font-serif font-bold mb-4">Our Products</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+      <section className="py-32 bg-secondary/50">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="text-center mb-16 animate-fade-in max-w-3xl mx-auto">
+            <div className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-6">
+              Products
+            </div>
+            <h2 className="text-5xl md:text-6xl font-display font-bold mb-6 tracking-tight">Our Products</h2>
+            <p className="text-xl text-muted-foreground">
               Discover our range of quality rice products, each carefully cultivated and processed to perfection
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {products.map((product, index) => (
               <div key={product.name} className="animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
                 <ProductCard {...product} />
@@ -106,20 +112,20 @@ const Home = () => {
       </section>
 
       {/* Values Section */}
-      <section className="py-20 bg-secondary">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8">
+      <section className="py-32 bg-background">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
             {values.map((value, index) => (
               <div
                 key={value.title}
-                className="text-center p-8 animate-fade-in"
+                className="text-center p-8 animate-fade-in group"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-accent text-accent-foreground mb-4">
-                  <value.icon size={32} />
+                <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-primary to-green text-white mb-6 transition-transform group-hover:scale-110">
+                  <value.icon size={36} />
                 </div>
-                <h3 className="text-xl font-serif font-bold mb-2">{value.title}</h3>
-                <p className="text-muted-foreground">{value.description}</p>
+                <h3 className="text-2xl font-display font-bold mb-3 tracking-tight">{value.title}</h3>
+                <p className="text-muted-foreground text-lg">{value.description}</p>
               </div>
             ))}
           </div>

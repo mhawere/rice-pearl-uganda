@@ -1,5 +1,8 @@
 import ProductCard from '@/components/ProductCard';
-import productsImage from '@/assets/products.jpg';
+import superRiceImage from '@/assets/super-rice.png';
+import basmatiRiceImage from '@/assets/basmati-rice.png';
+import kaisoRiceImage from '@/assets/kaiso-rice.png';
+import pakistanRiceImage from '@/assets/pakistan-rice.png';
 
 const Products = () => {
   const products = [
@@ -7,7 +10,7 @@ const Products = () => {
       name: 'Super Rice',
       description:
         'With an enticing aroma that relishes your taste buds and natural flavours along with a creamy whiteness in the grain dedicated to the feeling of Uganda.',
-      image: productsImage,
+      image: superRiceImage,
       features: [
         'Locally grown and processed',
         'Aromatic and flavorful',
@@ -18,7 +21,7 @@ const Products = () => {
       name: 'Basmati Rice',
       description:
         'Our Basmati is distinctive among other aromatic long grains with the sweetest aroma, soft, delicious texture and taste, bursting with flavour farmed and milled locally in Busembatia, Uganda.',
-      image: productsImage,
+      image: basmatiRiceImage,
       features: [
         'Farmed in Busembatia, Uganda',
         'Aromatic long grain',
@@ -29,7 +32,7 @@ const Products = () => {
       name: 'Kaiso Rice',
       description:
         'The rice is locally grown in Uganda as the leading brand incorporating a natural and organic touch. A ravishing grain in size, shape and taste grown in our fields in Busembatia, dedicated to feeding our Nation.',
-      image: productsImage,
+      image: kaisoRiceImage,
       features: [
         'Organic farming practices',
         'Locally grown',
@@ -40,7 +43,7 @@ const Products = () => {
       name: 'Pakistan Rice',
       description:
         'A radiant long white grain exported from the depth of Pakistan with excellent taste and texture, upholding international standards; the consumers\' grain of choice.',
-      image: productsImage,
+      image: pakistanRiceImage,
       features: [
         'International quality standards',
         'Long white grain',

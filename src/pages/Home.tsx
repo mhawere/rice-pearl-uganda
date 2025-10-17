@@ -2,13 +2,16 @@ import Hero from '@/components/Hero';
 import ProductCard from '@/components/ProductCard';
 import { Leaf, Users, CheckCircle } from 'lucide-react';
 import productsImage from '@/assets/products.jpg';
+import superRiceImage from '@/assets/super-rice.png';
+import basmatiRiceImage from '@/assets/basmati-rice.png';
+import kaisoRiceImage from '@/assets/kaiso-rice.png';
 
 const Home = () => {
   const products = [
     {
       name: 'Super Rice',
       description: 'With an enticing aroma that relishes your taste buds and natural flavours along with a creamy whiteness in the grain dedicated to the feeling of Uganda.',
-      image: productsImage,
+      image: superRiceImage,
       features: [
         'Locally grown and processed',
         'Aromatic and flavorful',
@@ -18,7 +21,7 @@ const Home = () => {
     {
       name: 'Basmati Rice',
       description: 'Our Basmati is distinctive among other aromatic long grains with the sweetest aroma, soft, delicious texture and taste, bursting with flavour farmed and milled locally in Busembatia, Uganda.',
-      image: productsImage,
+      image: basmatiRiceImage,
       features: [
         'Farmed in Busembatia, Uganda',
         'Aromatic long grain',
@@ -28,7 +31,7 @@ const Home = () => {
     {
       name: 'Kaiso Rice',
       description: 'The rice is locally grown in Uganda as the leading brand incorporating a natural and organic touch. A ravishing grain in size, shape and taste grown in our fields in Busembatia, dedicated to feeding our Nation.',
-      image: productsImage,
+      image: kaisoRiceImage,
       features: [
         'Organic farming practices',
         'Locally grown',

@@ -26,9 +26,13 @@ const Navigation = () => {
     { name: 'Gallery', path: '/gallery' },
   ];
 
+  // Pages that don't have dark hero backgrounds should always show opaque nav
+  const shouldAlwaysBeOpaque = location.pathname !== '/';
+  const navIsOpaque = isScrolled || shouldAlwaysBeOpaque;
+
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-      isScrolled ? 'bg-card/98 backdrop-blur-lg shadow-lg border-b border-border py-4' : 'bg-transparent py-6'
+      navIsOpaque ? 'bg-card/98 backdrop-blur-lg shadow-lg border-b border-border py-4' : 'bg-transparent py-6'
     }`}>
       <div className="container mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between">
@@ -37,7 +41,7 @@ const Navigation = () => {
             <img 
               src={logo} 
               alt="Pearl Rice" 
-              className={`transition-all duration-500 group-hover:scale-105 ${isScrolled ? 'h-12' : 'h-16'}`}
+              className={`transition-all duration-500 group-hover:scale-105 ${navIsOpaque ? 'h-12' : 'h-16'}`}
             />
           </Link>
 
@@ -50,7 +54,7 @@ const Navigation = () => {
                 className={`px-6 py-3 rounded-2xl font-semibold transition-all text-base relative group ${
                   location.pathname === link.path
                     ? 'bg-primary text-primary-foreground shadow-md'
-                    : isScrolled ? 'text-foreground hover:bg-secondary/80' : 'text-white hover:bg-white/10'
+                    : navIsOpaque ? 'text-foreground hover:bg-secondary/80' : 'text-white hover:bg-white/10'
                 }`}
               >
                 {link.name}
@@ -69,7 +73,7 @@ const Navigation = () => {
           {/* Mobile Menu Button */}
           <button
             className={`lg:hidden px-5 py-2.5 rounded-xl font-semibold transition-all flex items-center gap-2 ${
-              isScrolled ? 'bg-secondary text-foreground' : 'bg-white/10 text-white backdrop-blur-sm'
+              navIsOpaque ? 'bg-secondary text-foreground' : 'bg-white/10 text-white backdrop-blur-sm'
             }`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"

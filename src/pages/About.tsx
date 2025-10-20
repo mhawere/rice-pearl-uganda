@@ -30,17 +30,17 @@ const About = () => {
   return (
     <div className="min-h-screen pt-20">
       {/* Page Header */}
-      <section className="py-20 bg-primary text-primary-foreground">
+      <section className="py-12 sm:py-16 md:py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl font-serif font-bold mb-4 animate-fade-in">Our Story</h1>
-          <p className="text-xl animate-fade-in" style={{ animationDelay: '0.1s' }}>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold mb-3 sm:mb-4 animate-fade-in">Our Story</h1>
+          <p className="text-base sm:text-lg md:text-xl animate-fade-in" style={{ animationDelay: '0.1s' }}>
             Building Community Through Quality Rice Since 2009
           </p>
         </div>
       </section>
 
       {/* Main Story */}
-      <section className="py-20">
+      <section className="py-12 sm:py-16 md:py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-lg max-w-none">

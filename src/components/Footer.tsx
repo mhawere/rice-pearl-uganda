@@ -18,8 +18,8 @@ const Footer = () => {
 
   return (
     <footer className="bg-foreground text-background">
-      <div className="container mx-auto px-4 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+      <div className="container mx-auto px-4 lg:px-8 py-12 sm:py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-6 sm:mb-8">
           {/* Quick Links */}
           <div>
             <h3 className="text-lg font-serif font-bold mb-4">Quick Links</h3>
@@ -62,19 +62,19 @@ const Footer = () => {
           </div>
 
           {/* Newsletter */}
-          <div>
+          <div className="sm:col-span-2 lg:col-span-1">
             <h3 className="text-lg font-serif font-bold mb-4">Newsletter</h3>
             <p className="text-sm mb-4">Get our latest news and updates</p>
-            <form onSubmit={handleSubscribe} className="flex gap-2">
+            <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-2">
               <Input
                 type="email"
                 placeholder="Your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="bg-primary-foreground text-foreground"
+                className="bg-primary-foreground text-foreground text-sm"
               />
-              <Button type="submit" variant="secondary">
+              <Button type="submit" variant="secondary" className="whitespace-nowrap text-sm">
                 Subscribe
               </Button>
             </form>

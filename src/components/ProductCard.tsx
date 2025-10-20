@@ -16,19 +16,19 @@ const ProductCard = ({ name, description, image, features }: ProductCardProps) =
         <img
           src={image}
           alt={name}
-          className="w-full h-full object-contain p-8 transition-all duration-700 group-hover:scale-110 group-hover:rotate-3"
+          className="w-full h-full object-contain p-4 sm:p-6 md:p-8 transition-all duration-700 group-hover:scale-110 group-hover:rotate-3"
         />
       </div>
       
-      <CardContent className="p-10">
-        <h3 className="text-3xl font-display font-bold mb-4 tracking-tight group-hover:text-primary transition-colors">{name}</h3>
-        <p className="text-muted-foreground mb-8 leading-relaxed text-base">{description}</p>
+      <CardContent className="p-4 sm:p-6 md:p-8 lg:p-10">
+        <h3 className="text-xl sm:text-2xl md:text-3xl font-display font-bold mb-3 sm:mb-4 tracking-tight group-hover:text-primary transition-colors">{name}</h3>
+        <p className="text-muted-foreground mb-4 sm:mb-6 md:mb-8 leading-relaxed text-sm sm:text-base">{description}</p>
         
-        <ul className="space-y-4">
+        <ul className="space-y-2 sm:space-y-3 md:space-y-4">
           {features.map((feature, index) => (
-            <li key={index} className="flex items-start gap-3">
-              <span className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-br from-green to-accent flex items-center justify-center text-white text-xs font-bold mt-1 shadow-md">✓</span>
-              <span className="leading-relaxed text-base">{feature}</span>
+            <li key={index} className="flex items-start gap-2 sm:gap-3">
+              <span className="flex-shrink-0 w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-gradient-to-br from-green to-accent flex items-center justify-center text-white text-xs font-bold mt-0.5 sm:mt-1 shadow-md">✓</span>
+              <span className="leading-relaxed text-sm sm:text-base">{feature}</span>
             </li>
           ))}
         </ul>

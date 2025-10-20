@@ -55,21 +55,21 @@ const Products = () => {
   return (
     <div className="min-h-screen pt-20">
       {/* Page Header */}
-      <section className="py-20 bg-primary text-primary-foreground">
+      <section className="py-12 sm:py-16 md:py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl font-serif font-bold mb-4 animate-fade-in">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold mb-3 sm:mb-4 animate-fade-in">
             Our Products
           </h1>
-          <p className="text-xl animate-fade-in" style={{ animationDelay: '0.1s' }}>
+          <p className="text-base sm:text-lg md:text-xl animate-fade-in" style={{ animationDelay: '0.1s' }}>
             Quality Rice for Every Occasion
           </p>
         </div>
       </section>
 
       {/* Products Grid */}
-      <section className="py-20">
+      <section className="py-12 sm:py-16 md:py-20">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid sm:grid-cols-2 gap-6 sm:gap-8 max-w-5xl mx-auto">
             {products.map((product, index) => (
               <div
                 key={product.name}

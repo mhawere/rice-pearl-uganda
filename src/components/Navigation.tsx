@@ -31,17 +31,19 @@ const Navigation = () => {
   const navIsOpaque = isScrolled || shouldAlwaysBeOpaque;
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-      navIsOpaque ? 'bg-card/98 backdrop-blur-lg shadow-lg border-b border-border py-4' : 'bg-transparent py-6'
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      navIsOpaque ? 'bg-card/98 backdrop-blur-lg shadow-lg border-b border-border' : 'bg-transparent'
     }`}>
-      <div className="container mx-auto px-6 lg:px-12">
-        <div className="flex items-center justify-between">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-12">
+        <div className={`flex items-center justify-between transition-all duration-300 ${
+          navIsOpaque ? 'h-20' : 'h-24'
+        }`}>
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group relative z-10">
+          <Link to="/" className="flex items-center gap-3 group relative z-10 flex-shrink-0">
             <img 
               src={logo} 
               alt="Pearl Rice" 
-              className={`transition-all duration-500 group-hover:scale-105 ${navIsOpaque ? 'h-14' : 'h-20'}`}
+              className={`transition-all duration-300 group-hover:scale-105 ${navIsOpaque ? 'h-12' : 'h-16'}`}
             />
           </Link>
 
